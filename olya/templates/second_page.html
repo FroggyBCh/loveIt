@@ -1,0 +1,421 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>и всегда буду</title>
+	<style>
+@font-face {
+	font-family: "Miratrix Normal";
+	src: url( "{% static 'css/fonts/Miratrix-Normal.otf'%}")
+}
+HTML, body {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(to left, #454545,#212121);
+    font-family: "Miratrix Normal";
+    font-size: 6.5vw;
+}
+/*
+#dr {
+  
+}
+*/
+
+.char1,
+.char2,
+.char3,
+.char4,
+.char5,
+.char6,
+.char7,
+.char8,
+.char9,
+.char10,
+.char11,
+.char12,
+.char13 {
+  animation: color 3s infinite;
+}
+
+.char1 {
+  animation-delay: -0.1s;
+}
+
+.char2 {
+  animation-delay: 0.2s;
+}
+
+.char3 {
+  animation-delay: -0.3s;
+}
+
+.char4 {
+  animation-delay: 0.4s;
+}
+
+.char5 {
+  animation-delay: -0.5s;
+}
+
+.char6 {
+  animation-delay: 0.6s;
+}
+
+.char7 {
+  animation-delay: -0.7s;
+}
+
+.char8 {
+  animation-delay: 0.8s;
+}
+.char9 {
+  animation-delay: -0.9s;			
+}
+.char10 {
+  animation-delay: 0.10s;			
+}
+.char11 {
+  animation-delay: -0.11s;			
+}
+.char12 {
+  animation-delay: 0.12s;			
+}
+.char13 {
+  animation-delay: -0.13;			
+}
+
+		
+.content {
+  position: absolute;
+  margin-top: 50px;
+  left: 240px;
+  transform: translate(-50%, -50%);
+  height: 160px;
+  overflow: hidden;
+  line-height: 40px;
+  font-size: 3.9vw;
+  color: #B00000;
+}
+.content__container {
+  overflow: hidden;
+  height: 40px;
+  padding: 0 40px;
+}
+.content__container:before {
+  content: "[";
+  left: 0;
+}
+.content__container:after {
+  content: "]";
+  position: absolute;
+  right: 0;
+}
+.content__container:after, .content__container:before {
+  position: absolute;
+  top: 0;
+  font-size: 3.9vw;
+  color: #FFCBDB;
+  line-height: 40px;
+  -webkit-animation-name: opacity;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.content__container__text {
+  display: inline;
+  float: left;
+  margin: 0;
+}
+.content__container__list {
+  margin-top: 0;
+  padding-left: 110px;
+  text-align: left;
+  list-style: none;
+  -webkit-animation-name: change;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: change;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.content__container__list__item {
+  line-height: 40px;
+  margin: 0;
+}
+
+		
+#aboba {
+   margin-top: 140px;
+   color: #FFCBDB	
+}		
+		
+#glt {
+	display: flex;
+	margin-top: 400px;
+	align-content: center
+}		
+.bigboi, .bigboi2 {
+	height: 1000px;
+	width: 300px;
+	border: solid #FFCBDB 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #B00000;
+}
+.bigboi {
+	margin-left: 0;
+	position:absolute; 
+	left:0;		
+}
+.bigboi2 {
+	margin-right: 0;
+	position:absolute; 
+	right:0;
+}
+#smb {
+	width: 598px;
+	margin: 0 350px;
+	font-size: 2vw;	
+	text-align: center;
+	color: #FFCBDB
+}
+.povt {
+	writing-mode: vertical-rl;
+    text-orientation: upright;	
+}
+.jopa {
+	opacity: 0;	
+}
+.jopa.element-show {
+  opacity: 1;
+  transition: opacity 10s;
+}
+		
+
+footer {
+	display: flex;
+	justify-content: center;	
+}
+.foot {
+	margin: 50px;
+	position: absolute;
+	left: calc(50% - 135px);
+}
+/* Базовые стили */
+.heart {
+  position: relative;
+  width: 100px;
+  height: 175px;
+  background-color: red;
+  box-shadow: -1px 0px 2px #92000a;
+/* Скругляем верхние углы */    
+  -webkit-border-radius: 50px 50px 0 0;
+  -moz-border-radius: 50px 50px 0 0;
+  border-radius: 50px 50px 0 0;
+/* Определяем угол наклона */    
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  -o-transform: rotate(315deg);
+  transform: rotate(315deg);
+}
+/* Формируем правую часть */
+.heart:before {
+  position: absolute;
+  width: 175px;
+  height: 100px;
+  left: 0;
+  bottom: 0;
+  content: "";
+  background-color: red;
+  box-shadow: 0px 3px 3px ; 
+  -webkit-border-radius: 50px 50px 0 0;
+  -moz-border-radius: 50px 50px 0 0;
+  border-radius: 0 50px 50px 0;
+}
+/* Убираем тень при наведении */
+.heart:hover:before, .heart:hover{
+    box-shadow:none;
+}
+		
+		
+@-webkit-keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes change {
+  0%, 12.66%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  16.66%, 29.32% {
+    transform: translate3d(0, -25%, 0);
+  }
+  33.32%, 45.98% {
+    transform: translate3d(0, -50%, 0);
+  }
+  49.98%, 62.64% {
+    transform: translate3d(0, -75%, 0);
+  }
+  66.64%, 79.3% {
+    transform: translate3d(0, -50%, 0);
+  }
+  83.3%, 95.96% {
+    transform: translate3d(0, -25%, 0);
+  }
+}
+@keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes change {
+  0%, 12.66%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  16.66%, 29.32% {
+    transform: translate3d(0, -25%, 0);
+  }
+  33.32%, 45.98% {
+    transform: translate3d(0, -50%, 0);
+  }
+  49.98%, 62.64% {
+    transform: translate3d(0, -75%, 0);
+  }
+  66.64%, 79.3% {
+    transform: translate3d(0, -50%, 0);
+  }
+  83.3%, 95.96% {
+    transform: translate3d(0, -25%, 0);
+  }
+}		
+		
+@keyframes color {
+  0% {
+    color: #B00000;
+  }
+  25% {
+    color: #FFCBDB;
+  }
+  50% {
+    color: #E52B50;
+  }
+  75% {
+    color: #FF2400;
+  }
+  100% {
+	color: #92000a;
+  }
+}
+	</style>
+	<link rel="stylesheet" href="{% static 'css/style1.css' %}">
+</head>
+
+<body>
+	<header>
+	<div>
+		<p id="dr">
+  			<span class="char1">с</span>
+  			<span class="char2">д</span>
+  			<span class="char3">н</span>
+  			<span class="char4">ё</span>
+  			<span class="char5">м</span>
+  			<span class="char6">р</span>
+  			<span class="char7">о</span>
+  			<span class="char8">ж</span>
+			<span class="char9">д</span>
+			<span class="char10">е</span>
+			<span class="char11">н</span>
+			<span class="char12">и</span>
+			<span class="char13">я</span>
+		</p>
+	</div>
+	<div class="content">
+		<div class="content__container">
+    	<p class="content__container__text">
+      	Ты
+    	</p>
+    
+    	<ul class="content__container__list">
+      		<li class="content__container__list__item">лучшая !</li>
+      		<li class="content__container__list__item">красивая !</li>
+      		<li class="content__container__list__item">чёткая !</li>
+      		<li class="content__container__list__item">на хайпе !</li>
+   		</ul>
+  		</div>
+	</div>
+	<div id="aboba">
+		<div>
+			<p id="trt">и этот торт твой</p>
+		</div>
+		<div>
+		<div class="pudding">
+  			<div class="pudding__part">
+    		<div class="pudding__head"></div>
+    		<div class="pudding__eye"></div>
+    		<div class="pudding__mouse"></div>
+    		<div class="pudding__cream"></div>
+    		<div class="pudding__cherry"></div>
+    		<div class="pudding__bottom"></div>
+  			</div>
+  			<div class="pudding__sara"></div>
+		</div>
+		</div>
+	</div>
+	</header>
+	<main>
+	<div id="glt">
+		<div class="bigboi">
+			<div class="jopa">
+				<span class="povt">
+					скинь
+				</span>
+			</div>
+		</div>
+		<div id="smb">
+		<p>Оля, что это за прекрасное слово? Слыша его, огонь в моём сердце загорается ярче, чем у хохлов жёпа, когда их забыть спросили. Твоё имя как пение матери заставляет окунуться в омут детского восторга. С днём рождения, солнышко! Трудно что-то пожелать самой красивой и охуенной. Счастья? Я и ты самые счастливые люди на земле, зачем же нам его переизбыток? Жизнь станет тогда слишком притерной и не интересной. Хотя с тобой час за две секунды. Красоты? Идеальнее уже и быть не может. Ты, будто мраморная статуя древнего мастера, каждый штрих выверен на все сто. А про твою жёпку я вообще молчу(трахни меня). Денег? Можно впринципе, но с твоей красотой тебе скоро всё начнут бесплатно давать. А здоровье никому не повредит. Так что я желаю тебе, самой лучшей девушке, быть здоровой, богатой, всегда быть собой и самое главное, чтобы всегда мы оставались вместе! Я люблю тебя! Надеюсь этот день станет самым лучшим для тебя. 18 лет не каждый день исполняется как-никак.</p>
+		</div>
+		<div class="bigboi2">
+			<div class="jopa">
+				<span class="povt">
+					сиськи
+				</span>
+			</div>
+		</div>
+		<script>
+		function onEntry(entry) {
+  			entry.forEach(change => {
+    			if (change.isIntersecting) {
+      				change.target.classList.add('element-show');
+    			}
+			  });
+			}
+			let options = { threshold: [0.5] };
+			let observer = new IntersectionObserver(onEntry, options);
+			let elements = document.querySelectorAll('.jopa');
+			for (let elm of elements) {
+  				observer.observe(elm);
+			}
+		</script>
+	</div>
+	</main>
+	<footer>
+		<div class="foot">
+			<div class="heart"></div>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Я тебя люблю</title>
+<!--	<link rel="stylesheet" href="{% static 'css/fst.css' %}">-->
+	<style>
+@font-face {
+	font-family: "Miratrix Normal";
+	src: url( "{% static 'css/fonts/Miratrix-Normal.otf'%}")
+}
+	HTML, body {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(to left, #454545,#212121);
+  font-family: "Miratrix Normal";
+  font-size: 9vw;
+}
+
+.text--line {
+  font-size: 9vw;
+}
+
+svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.text-copy {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 7% 28%;
+  stroke-width: 3px;
+  -webkit-animation: stroke-offset 9s infinite linear;
+          animation: stroke-offset 9s infinite linear;
+}
+.text-copy:nth-child(1) {
+  stroke:  #B00000;
+  stroke-dashoffset: 7%;
+}
+.text-copy:nth-child(2) {
+  stroke: #FFCBDB;
+  stroke-dashoffset: 14%;
+}
+.text-copy:nth-child(3) {
+  stroke: #E52B50;
+  stroke-dashoffset: 21%;
+}
+.text-copy:nth-child(4) {
+  stroke: #FF2400;
+  stroke-dashoffset: 28%;
+}
+.text-copy:nth-child(5) {
+  stroke: #92000a;
+  stroke-dashoffset: 35%;
+}
+.iya {
+	position:absolute; 
+	bottom:0;
+	left: 50%; 
+    transform: translate(-50%, -50%);
+	font-size: 1.5vw;
+}
+.ib {
+	border: solid #B00000 3px ;
+	border-radius: 5px;		
+	color: #B00000;	
+}
+a {
+	text-decoration: none;
+}
+.ib:hover {
+	color: #FFCBDB;		
+}
+@-webkit-keyframes stroke-offset {
+  50% {
+    stroke-dashoffset: 35%;
+    stroke-dasharray: 0 87.5%;
+  }
+}
+
+@keyframes stroke-offset {
+  50% {
+    stroke-dashoffset: 35%;
+    stroke-dasharray: 0 87.5%;
+  }
+}
+@media screen and (min-width:100px) and (max-width:767px){
+	body, .text--line{
+		font-size:15.5vw
+	}
+	
+	.iya{
+		font-size:2.5vw
+	}	
+}
+	
+	</style>
+</head>
+<body>
+<svg viewBox="0 0 800 600">
+  <symbol id="s-text">
+    <text text-anchor="middle"
+          x="50%"
+          y="35%"
+          class="text--line"
+          >
+      Я
+    </text>
+    <text text-anchor="middle"
+          x="50%"
+          y="68%"
+          class="text--line2"
+          >
+      тебя люблю
+    </text>
+    
+  </symbol>
+  
+  <g class="g-ants">
+    <use xlink:href="#s-text"
+      class="text-copy"></use>     
+    <use xlink:href="#s-text"
+      class="text-copy"></use>     
+    <use xlink:href="#s-text"
+      class="text-copy"></use>     
+    <use xlink:href="#s-text"
+      class="text-copy"></use>     
+    <use xlink:href="#s-text"
+      class="text-copy"></use>     
+  </g>
+  
+  
+</svg>
+	<div class="iya">
+	<a href="{% url 'scp' %}">
+		<h3 class="ib">И я тебя</h3>
+	</a>
+	</div>
+</body>
+</html>
